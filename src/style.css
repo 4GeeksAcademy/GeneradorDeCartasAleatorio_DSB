@@ -1,1 +1,53 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  justify-content: center;
+}
+
+.card-bg {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 200px;
+  border-radius: 15px;
+}
+
+body {
+  background-color: green;
+}
+
+.simbol {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  font-size: 100px;
+  justify-content: center;
+}
+
+.num {
+  display: flex;
+  width: 120px;
+  height: 200px;
+  margin: auto;
+  font-size: 110px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.simbol-mirror {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  font-size: 100px;
+  transform: scaleY(-1);
+  margin-top: 50px;
+  margin-left: 250px;
+  justify-content: center;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+}
