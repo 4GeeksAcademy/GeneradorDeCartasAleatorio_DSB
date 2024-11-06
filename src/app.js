@@ -6,7 +6,8 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
+  setInterval(generateCard, 10000);
+
   let simbolCard = ["♦", "♥", "♠", "♣"];
   let numCard = [
     "A",
@@ -35,14 +36,27 @@ window.onload = function() {
     return randomNum;
   }
 
-  let generatedSimbol = generateSimbol();
-  document.getElementById("card-simbol").innerHTML = generatedSimbol;
-  document.getElementById("card-simbol-down").innerHTML = generatedSimbol;
-  document.getElementById("card-num").innerHTML = generateNum();
+  function generateCard() {
+    let generatedSimbol = generateSimbol();
+    document.getElementById("card-simbol").innerHTML = generatedSimbol;
+    document.getElementById("card-simbol-down").innerHTML = generatedSimbol;
+    document.getElementById("card-num").innerHTML = generateNum();
 
-  if (generatedSimbol === "♥" || generatedSimbol === "♦") {
-    document.getElementById("card-simbol").style.color = "red";
-    document.getElementById("card-simbol-down").style.color = "red";
-    document.getElementById("card-num").style.color = "red";
+    // Cambiar el color de la carta si es un símbolo rojo
+    if (generatedSimbol === "♥" || generatedSimbol === "♦") {
+      document.getElementById("card-simbol").style.color = "red";
+      document.getElementById("card-simbol-down").style.color = "red";
+      document.getElementById("card-num").style.color = "red";
+    } else {
+      document.getElementById("card-simbol").style.color = "black";
+      document.getElementById("card-simbol-down").style.color = "black";
+      document.getElementById("card-num").style.color = "black";
+    }
   }
+
+  // Generar una carta al cargar la página
+  generateCard();
+
+  // Agregar un botón para generar una nueva carta
+  document.querySelector("button").addEventListener("click", generateCard);
 };

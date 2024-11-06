@@ -51,3 +51,12 @@ body {
 p {
   font-family: "Playfair Display", serif;
 }
+
+p.text-button {
+  font-size: 25px;
+}
+
+button {
+  width: 350px;
+  height: 60px;
+}
