@@ -42,7 +42,6 @@ window.onload = function() {
     document.getElementById("card-simbol-down").innerHTML = generatedSimbol;
     document.getElementById("card-num").innerHTML = generateNum();
 
-    // Cambiar el color de la carta si es un símbolo rojo
     if (generatedSimbol === "♥" || generatedSimbol === "♦") {
       document.getElementById("card-simbol").style.color = "red";
       document.getElementById("card-simbol-down").style.color = "red";
@@ -54,9 +53,7 @@ window.onload = function() {
     }
   }
 
-  // Generar una carta al cargar la página
   generateCard();
 
-  // Agregar un botón para generar una nueva carta
   document.querySelector("button").addEventListener("click", generateCard);
 };

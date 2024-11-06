@@ -17,39 +17,21 @@ body {
   background-color: green;
 }
 
-.simbol {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  align-items: center;
+.simbol,
+.simbol-mirror {
+  width: auto;
+  height: 150px;
   font-size: 100px;
-  justify-content: center;
 }
 
 .num {
-  display: flex;
-  width: 120px;
-  height: 200px;
-  margin: auto;
+  width: auto;
+  height: 155px;
   font-size: 110px;
-  justify-content: center;
-  margin-top: 50px;
 }
 
 .simbol-mirror {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  align-items: center;
-  font-size: 100px;
   transform: scaleY(-1);
-  margin-top: 50px;
-  margin-left: 250px;
-  justify-content: center;
-}
-
-p {
-  font-family: "Playfair Display", serif;
 }
 
 p.text-button {
